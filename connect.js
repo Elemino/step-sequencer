@@ -13,18 +13,21 @@ synths[2].oscillator.type = 'sawtooth';
 
 synths.forEach(synth => synth.toMaster());
 
-const $rows = document.body.querySelectorAll('div' > div');
-
-Tone.Transport.scheduleRepeat(repeat, '8n');
+//const $rows = document.body.querySelectorAll('div' > div'),
+  notes = ['G5', 'E4', 'C3'];
 let index = 0;
 
-function repeat(time) {
+Tone.Transport.scheduleRepeat(repeat, '8n');
 
-  for (let i = 0; i < $rows.length; i++) {
+
+function repeat(time) {
+ let step = % 8;
+ for (let i = 0; i < $rows.length; i++) {
     let synth = synth[i],
+        note = notes[i]
         $row = $rows[i],
         $input =$rows.querySelector(`input:nth-child(${step + 1})`);
-        if($input.checked) synth.triggerAttackRelease(note, '8n', time);
+        if ($input.checked) synth.triggerAttackRelease(note, '8n', time);
   }
   index++;
 }
