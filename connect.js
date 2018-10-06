@@ -33,3 +33,4 @@ function repeat(time) {
         if ($input.checked) synth.triggerAttackRelease(note, '8n', time);
   }
   index++;
+  
