@@ -32,5 +32,5 @@ function repeat(time) {
         $input =$rows.querySelector(`input:nth-child(${step + 1})`);
         if ($input.checked) synth.triggerAttackRelease(note, '8n', time);
   }
+ }
   index++;
-  
