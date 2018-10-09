@@ -34,3 +34,5 @@ function repeat(time) {
   }
  }
   index++;
+
+  
