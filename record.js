@@ -6,6 +6,4 @@ synth.toMaster();
 
 const notes = 'CDEFGAB'. split('').map(n => `${n}4`);
 let note = 0;
-Tone.Transport.scheduleRepeat(time => {
-
-});
+Tone.Transport.scheduleRepeat(time => {});
